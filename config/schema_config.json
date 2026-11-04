@@ -1,0 +1,103 @@
+{
+  "project_name": "Automated Data Cleaning & Schema Transformation",
+  "version": "1.0.0",
+  "standardize_column_names": true,
+  "rename_mapping": {
+    "cust_id": "customer_id",
+    "customer_name": "customer_name",
+    "age": "age",
+    "email_address": "email",
+    "phone_number": "phone",
+    "annual_income": "salary",
+    "join_date": "joining_date",
+    "city": "city",
+    "active_status": "is_active",
+    "notes": "notes"
+  },
+  "schema": {
+    "customer_id": "Int64",
+    "customer_name": "string",
+    "age": "Int64",
+    "email": "string",
+    "phone": "string",
+    "salary": "float64",
+    "joining_date": "string",
+    "city": "string",
+    "is_active": "boolean"
+  },
+  "target_column_order": [
+    "customer_id",
+    "customer_name",
+    "age",
+    "email",
+    "phone",
+    "salary",
+    "joining_date",
+    "city",
+    "is_active"
+  ],
+  "drop_columns_threshold": 0.90,
+  "currency_columns": {
+    "salary": {
+      "default_currency": "INR",
+      "target_currency": "INR",
+      "remove_symbols": true
+    }
+  },
+  "date_columns": {
+    "joining_date": {
+      "day_first": true,
+      "target_format": "%Y-%m-%d"
+    }
+  },
+  "missing_value_strategies": {
+    "numerical": {
+      "age": {
+        "strategy": "median"
+      },
+      "salary": {
+        "strategy": "mean"
+      }
+    },
+    "categorical": {
+      "city": {
+        "strategy": "mode"
+      },
+      "is_active": {
+        "strategy": "custom",
+        "fill_value": true
+      }
+    },
+    "critical_columns": [
+      "customer_id",
+      "customer_name"
+    ]
+  },
+  "duplicate_rules": {
+    "subset": [
+      "customer_id"
+    ],
+    "keep": "first"
+  },
+  "validation_rules": {
+    "primary_key": "customer_id",
+    "required_columns": [
+      "customer_id",
+      "customer_name",
+      "joining_date"
+    ],
+    "numeric_ranges": {
+      "age": {
+        "min": 18,
+        "max": 100
+      },
+      "salary": {
+        "min": 0,
+        "max": 10000000
+      }
+    },
+    "regex_patterns": {
+      "email": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+    }
+  }
+}

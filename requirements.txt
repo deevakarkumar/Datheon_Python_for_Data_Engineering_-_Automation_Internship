@@ -1,0 +1,6 @@
+# Automated Data Cleaning & Schema Transformation
+# Datheon Data Engineering Internship Project Dependencies
+
+pandas>=2.2.0,<3.1.0
+numpy>=1.26.0,<2.3.0
+pytest>=8.0.0
