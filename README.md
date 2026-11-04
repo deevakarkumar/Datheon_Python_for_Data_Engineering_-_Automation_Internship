@@ -238,26 +238,32 @@ pip install -r requirements.txt
 
 ## 9. How to Run the Application
 
-The application provides a flexible Command-Line Interface (`main.py`) powered by `argparse`.
+The application provides both an **interactive Streamlit Web Dashboard (`app.py`)** and a flexible **Command-Line Interface (`main.py`)** powered by `argparse`.
 
-### 1. Inspect & Profile Dataset (No Changes Made)
+### 1. Launch Interactive Streamlit Web UI (Recommended)
+Launch the visual web dashboard to inspect raw data, run the ETL pipeline, view pass/quarantine splits, and download cleaned files:
+```cmd
+streamlit run app.py
+```
+
+### 2. Inspect & Profile Dataset via CLI (No Changes Made)
 Inspect raw dimensions, missing rates, uniqueness, and IQR outliers before transforming:
 ```cmd
 python main.py --input data/raw/sample_messy_data.csv --profile-only
 ```
 
-### 2. Execute Full Cleaning & Transformation Pipeline
+### 3. Execute Full Pipeline via CLI (Default Configuration)
 Run the end-to-end pipeline using the default configuration:
 ```cmd
 python main.py
 ```
 
-### 3. Run with Custom Paths and Verbose Debug Logging
+### 4. Run with Custom Paths and Verbose Debug Logging
 ```cmd
 python main.py --input data/raw/sample_messy_data.csv --config config/schema_config.json --output data/output --verbose
 ```
 
-### 4. CLI Arguments Reference
+### 5. CLI Arguments Reference
 | Short Flag | Long Flag | Default | Description |
 | :--- | :--- | :--- | :--- |
 | `-i` | `--input` | `data/raw/sample_messy_data.csv` | Path to the source raw CSV file |
