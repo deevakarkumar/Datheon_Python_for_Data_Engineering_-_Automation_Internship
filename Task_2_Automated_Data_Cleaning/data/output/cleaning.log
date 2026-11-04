@@ -1,0 +1,150 @@
+[2026-11-03 11:32:47] [INFO   ] [DataCleaningPipeline] - Initialized DataCleaningPipeline with config: schema_config.json
+[2026-11-03 11:32:47] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:32:47] [INFO   ] [DataCleaningPipeline] - STARTING DATA CLEANING PIPELINE FOR: sample_messy_data.csv
+[2026-11-03 11:32:47] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:32:47] [INFO   ] [DataCleaningPipeline.Loader] - Successfully loaded 'sample_messy_data.csv' [120 rows x 10 cols] using encoding 'utf-8'
+[2026-11-03 11:32:47] [INFO   ] [DataCleaningPipeline.Profiler] - Profiling dataset: 120 rows, 10 columns, 3 duplicate rows found
+[2026-11-03 11:32:47] [INFO   ] [DataCleaningPipeline.SchemaTransformer] - Applied column renaming: {'cust_id': 'customer_id', 'customer_name': 'customer_name', 'age': 'age', 'email_address': 'email', 'phone_number': 'phone', 'annual_income': 'salary', 'join_date': 'joining_date', 'city': 'city', 'active_status': 'is_active', 'notes': 'notes'}
+[2026-11-03 11:32:47] [INFO   ] [DataCleaningPipeline.Currency] - Normalized currency series 'salary': 117 valid values, 3 unparseable. Symbols found: ['Rs.', 'INR', 'Rs', '₹']
+[2026-11-03 11:32:47] [INFO   ] [DataCleaningPipeline.Dates] - Date normalization for column 'joining_date': 116 valid dates, 3 invalid dates (samples: ['99/99/9999', 'not_a_date'])
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline.MissingValues] - Dropping column 'notes': missing ratio 0.98 exceeds threshold 0.90
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'age' with median=42.00
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 3 missing values in 'salary' with mean=131630.06
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'city' with mode='Mumbai'
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline.Duplicates] - Removed 2 duplicate records matching subset columns ['customer_id']
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline.Duplicates] - Duplicate processing complete: 3 exact duplicates, 2 subset duplicates removed. Remaining rows: 115 (from 120)
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline.Validator] - Validation completed: 102 valid records, 13 quarantined records (out of 115 total)
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline.Reporter] - Generated JSON validation report at: data\output\validation_report.json
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline.Reporter] - Generated HTML visual summary report at: data\output\cleaning_summary.html
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline] - PIPELINE COMPLETED SUCCESSFULLY IN 0.19 SECONDS
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline] - Cleaned records saved to:     data\output\cleaned_data.csv
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline] - Quarantined records saved to: data\output\invalid_records.csv
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline] - Validation report saved to:   data\output\validation_report.json
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline] - HTML summary saved to:         data\output\cleaning_summary.html
+[2026-11-03 11:32:48] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline] - Initialized DataCleaningPipeline with config: schema_config.json
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline] - STARTING DATA CLEANING PIPELINE FOR: sample_messy_data.csv
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.Loader] - Successfully loaded 'sample_messy_data.csv' [120 rows x 10 cols] using encoding 'utf-8'
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.Profiler] - Profiling dataset: 120 rows, 10 columns, 3 duplicate rows found
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.SchemaTransformer] - Applied column renaming: {'cust_id': 'customer_id', 'customer_name': 'customer_name', 'age': 'age', 'email_address': 'email', 'phone_number': 'phone', 'annual_income': 'salary', 'join_date': 'joining_date', 'city': 'city', 'active_status': 'is_active', 'notes': 'notes'}
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.Currency] - Normalized currency series 'salary': 117 valid values, 3 unparseable. Symbols found: ['Rs.', '₹', 'Rs', 'INR']
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.Dates] - Date normalization for column 'joining_date': 116 valid dates, 3 invalid dates (samples: ['99/99/9999', 'not_a_date'])
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.MissingValues] - Dropping column 'notes': missing ratio 0.98 exceeds threshold 0.90
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'age' with median=42.00
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 3 missing values in 'salary' with mean=131630.06
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'city' with mode='Mumbai'
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.Duplicates] - Removed 2 duplicate records matching subset columns ['customer_id']
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.Duplicates] - Duplicate processing complete: 3 exact duplicates, 2 subset duplicates removed. Remaining rows: 115 (from 120)
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.Validator] - Validation completed: 102 valid records, 13 quarantined records (out of 115 total)
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.Reporter] - Generated JSON validation report at: data\output\validation_report.json
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline.Reporter] - Generated HTML visual summary report at: data\output\cleaning_summary.html
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline] - PIPELINE COMPLETED SUCCESSFULLY IN 0.14 SECONDS
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline] - Cleaned records saved to:     data\output\cleaned_data.csv
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline] - Quarantined records saved to: data\output\invalid_records.csv
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline] - Validation report saved to:   data\output\validation_report.json
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline] - HTML summary saved to:         data\output\cleaning_summary.html
+[2026-11-03 11:33:30] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline] - Initialized DataCleaningPipeline with config: schema_config.json
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline] - STARTING DATA CLEANING PIPELINE FOR: sample_messy_data.csv
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.Loader] - Successfully loaded 'sample_messy_data.csv' [120 rows x 10 cols] using encoding 'utf-8'
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.Profiler] - Profiling dataset: 120 rows, 10 columns, 3 duplicate rows found
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.SchemaTransformer] - Applied column renaming: {'cust_id': 'customer_id', 'customer_name': 'customer_name', 'age': 'age', 'email_address': 'email', 'phone_number': 'phone', 'annual_income': 'salary', 'join_date': 'joining_date', 'city': 'city', 'active_status': 'is_active', 'notes': 'notes'}
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.Currency] - Normalized currency series 'salary': 117 valid values, 3 unparseable. Symbols found: ['₹', 'Rs.', 'INR', 'Rs']
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.Dates] - Date normalization for column 'joining_date': 116 valid dates, 3 invalid dates (samples: ['99/99/9999', 'not_a_date'])
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.MissingValues] - Dropping column 'notes': missing ratio 0.98 exceeds threshold 0.90
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'age' with median=42.00
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 3 missing values in 'salary' with mean=131630.06
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'city' with mode='Mumbai'
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.Duplicates] - Removed 2 duplicate records matching subset columns ['customer_id']
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.Duplicates] - Duplicate processing complete: 3 exact duplicates, 2 subset duplicates removed. Remaining rows: 115 (from 120)
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.Validator] - Validation completed: 102 valid records, 13 quarantined records (out of 115 total)
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.Reporter] - Generated JSON validation report at: data\output\validation_report.json
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline.Reporter] - Generated HTML visual summary report at: data\output\cleaning_summary.html
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline] - PIPELINE COMPLETED SUCCESSFULLY IN 0.15 SECONDS
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline] - Cleaned records saved to:     data\output\cleaned_data.csv
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline] - Quarantined records saved to: data\output\invalid_records.csv
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline] - Validation report saved to:   data\output\validation_report.json
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline] - HTML summary saved to:         data\output\cleaning_summary.html
+[2026-11-03 11:44:54] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:50:17] [INFO   ] [DataCleaningPipeline] - Initialized DataCleaningPipeline with config: schema_config.json
+[2026-11-03 11:50:17] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:50:17] [INFO   ] [DataCleaningPipeline] - STARTING DATA CLEANING PIPELINE FOR: sample_messy_data.csv
+[2026-11-03 11:50:17] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.Loader] - Successfully loaded 'sample_messy_data.csv' [120 rows x 10 cols] using encoding 'utf-8'
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.Profiler] - Profiling dataset: 120 rows, 10 columns, 3 duplicate rows found
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.SchemaTransformer] - Applied column renaming: {'cust_id': 'customer_id', 'customer_name': 'customer_name', 'age': 'age', 'email_address': 'email', 'phone_number': 'phone', 'annual_income': 'salary', 'join_date': 'joining_date', 'city': 'city', 'active_status': 'is_active', 'notes': 'notes'}
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.Currency] - Normalized currency series 'salary': 117 valid values, 3 unparseable. Symbols found: ['Rs', 'INR', '₹', 'Rs.']
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.Dates] - Date normalization for column 'joining_date': 116 valid dates, 3 invalid dates (samples: ['99/99/9999', 'not_a_date'])
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.MissingValues] - Dropping column 'notes': missing ratio 0.98 exceeds threshold 0.90
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'age' with median=42.00
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 3 missing values in 'salary' with mean=131630.06
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'city' with mode='Mumbai'
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.Duplicates] - Removed 2 duplicate records matching subset columns ['customer_id']
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.Duplicates] - Duplicate processing complete: 3 exact duplicates, 2 subset duplicates removed. Remaining rows: 115 (from 120)
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.Validator] - Validation completed: 102 valid records, 13 quarantined records (out of 115 total)
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.Reporter] - Generated JSON validation report at: data\output\validation_report.json
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline.Reporter] - Generated HTML visual summary report at: data\output\cleaning_summary.html
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline] - PIPELINE COMPLETED SUCCESSFULLY IN 0.18 SECONDS
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline] - Cleaned records saved to:     data\output\cleaned_data.csv
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline] - Quarantined records saved to: data\output\invalid_records.csv
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline] - Validation report saved to:   data\output\validation_report.json
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline] - HTML summary saved to:         data\output\cleaning_summary.html
+[2026-11-03 11:50:18] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline] - Initialized DataCleaningPipeline with config: schema_config.json
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline] - STARTING DATA CLEANING PIPELINE FOR: sample_messy_data.csv
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline.Loader] - Successfully loaded 'sample_messy_data.csv' [120 rows x 10 cols] using encoding 'utf-8'
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline.Profiler] - Profiling dataset: 120 rows, 10 columns, 3 duplicate rows found
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline.SchemaTransformer] - Applied column renaming: {'cust_id': 'customer_id', 'customer_name': 'customer_name', 'age': 'age', 'email_address': 'email', 'phone_number': 'phone', 'annual_income': 'salary', 'join_date': 'joining_date', 'city': 'city', 'active_status': 'is_active', 'notes': 'notes'}
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline.Currency] - Normalized currency series 'salary': 117 valid values, 3 unparseable. Symbols found: ['Rs', 'Rs.', '₹', 'INR']
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline.Dates] - Date normalization for column 'joining_date': 116 valid dates, 3 invalid dates (samples: ['99/99/9999', 'not_a_date'])
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline.MissingValues] - Dropping column 'notes': missing ratio 0.98 exceeds threshold 0.90
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'age' with median=42.00
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 3 missing values in 'salary' with mean=131630.06
+[2026-11-03 11:57:01] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'city' with mode='Mumbai'
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline.Duplicates] - Removed 2 duplicate records matching subset columns ['customer_id']
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline.Duplicates] - Duplicate processing complete: 3 exact duplicates, 2 subset duplicates removed. Remaining rows: 115 (from 120)
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline.Validator] - Validation completed: 102 valid records, 13 quarantined records (out of 115 total)
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline.Reporter] - Generated JSON validation report at: data\output\validation_report.json
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline.Reporter] - Generated HTML visual summary report at: data\output\cleaning_summary.html
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline] - PIPELINE COMPLETED SUCCESSFULLY IN 0.39 SECONDS
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline] - Cleaned records saved to:     data\output\cleaned_data.csv
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline] - Quarantined records saved to: data\output\invalid_records.csv
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline] - Validation report saved to:   data\output\validation_report.json
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline] - HTML summary saved to:         data\output\cleaning_summary.html
+[2026-11-03 11:57:02] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline] - Initialized DataCleaningPipeline with config: schema_config.json
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline] - STARTING DATA CLEANING PIPELINE FOR: sample_messy_data.csv
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.Loader] - Successfully loaded 'sample_messy_data.csv' [120 rows x 10 cols] using encoding 'utf-8'
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.Profiler] - Profiling dataset: 120 rows, 10 columns, 3 duplicate rows found
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.SchemaTransformer] - Applied column renaming: {'cust_id': 'customer_id', 'customer_name': 'customer_name', 'age': 'age', 'email_address': 'email', 'phone_number': 'phone', 'annual_income': 'salary', 'join_date': 'joining_date', 'city': 'city', 'active_status': 'is_active', 'notes': 'notes'}
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.Currency] - Normalized currency series 'salary': 117 valid values, 3 unparseable. Symbols found: ['Rs', '₹', 'Rs.', 'INR']
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.Dates] - Date normalization for column 'joining_date': 116 valid dates, 3 invalid dates (samples: ['99/99/9999', 'not_a_date'])
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.MissingValues] - Dropping column 'notes': missing ratio 0.98 exceeds threshold 0.90
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'age' with median=42.00
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 3 missing values in 'salary' with mean=131630.06
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.MissingValues] - Imputed 2 missing values in 'city' with mode='Mumbai'
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.Duplicates] - Removed 2 duplicate records matching subset columns ['customer_id']
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.Duplicates] - Duplicate processing complete: 3 exact duplicates, 2 subset duplicates removed. Remaining rows: 115 (from 120)
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.Validator] - Validation completed: 102 valid records, 13 quarantined records (out of 115 total)
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.Reporter] - Generated JSON validation report at: data\output\validation_report.json
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline.Reporter] - Generated HTML visual summary report at: data\output\cleaning_summary.html
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline] - ======================================================================
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline] - PIPELINE COMPLETED SUCCESSFULLY IN 0.29 SECONDS
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline] - Cleaned records saved to:     data\output\cleaned_data.csv
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline] - Quarantined records saved to: data\output\invalid_records.csv
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline] - Validation report saved to:   data\output\validation_report.json
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline] - HTML summary saved to:         data\output\cleaning_summary.html
+[2026-11-05 00:32:09] [INFO   ] [DataCleaningPipeline] - ======================================================================

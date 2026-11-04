@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datheon Data Quality & Transformation Report</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 30px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 26px; }
+        .header p { margin: 0; opacity: 0.9; font-size: 14px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
+        }
+        .card-title { font-size: 12px; text-transform: uppercase; color: #64748b; font-weight: 700; }
+        .card-val { font-size: 28px; font-weight: 800; color: #0f172a; margin-top: 5px; }
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 25px;
+        }
+        .section h2 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #0f172a;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th {
+            background-color: #f8fafc;
+            text-align: left;
+            padding: 12px 10px;
+            font-weight: 600;
+            color: #475569;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            background-color: #10b981;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h1>Automated Data Cleaning & Schema Transformation Report</h1>
+                    <p>Internship Project | Organization: Datheon | Run Timestamp: 2026-11-05T00:32:09.539191</p>
+                </div>
+                <div>
+                    <span class="badge">SUCCESS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-title">Initial Records</div>
+                <div class="card-val">120</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Clean Valid Records</div>
+                <div class="card-val" style="color: #10b981;">102</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Quarantined Records</div>
+                <div class="card-val" style="color: #ef4444;">13</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Duplicates Purged</div>
+                <div class="card-val" style="color: #f59e0b;">5</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Values Imputed</div>
+                <div class="card-val" style="color: #6366f1;">7</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Dataset Column Evolution & Quality</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column Name</th>
+                        <th>Initial Missing</th>
+                        <th>Unique Values</th>
+                        <th>Raw Type</th>
+                        <th>Cleaned Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;">Cust_ID </td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">0 (0.0%)</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">115</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #6366f1;">str</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #059669; font-weight: bold;">str</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;"> Customer Name</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">2 (1.67%)</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">104</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #6366f1;">str</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #059669; font-weight: bold;">str</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;"> Age</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">2 (1.67%)</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">41</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #6366f1;">str</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #059669; font-weight: bold;">str</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;">Email_Address </td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">0 (0.0%)</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">114</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #6366f1;">str</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #059669; font-weight: bold;">str</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;">Phone Number</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">0 (0.0%)</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">115</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #6366f1;">str</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #059669; font-weight: bold;">str</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;">Annual Income </td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">2 (1.67%)</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">114</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #6366f1;">str</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #059669; font-weight: bold;">str</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;">Join_Date</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">1 (0.83%)</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">22</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #6366f1;">str</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #059669; font-weight: bold;">str</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;">City </td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">2 (1.67%)</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">8</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #6366f1;">str</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #059669; font-weight: bold;">str</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;">Active Status</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">0 (0.0%)</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">10</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #6366f1;">str</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #059669; font-weight: bold;">str</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-weight: 600;">Notes</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">118 (98.33%)</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">1</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #6366f1;">str</td>
+                <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace; color: #059669; font-weight: bold;">str</td>
+            </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Validation Constraint Violations</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Integrity Rule</th>
+                        <th style="text-align: right;">Violations Quarantined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace;">missing_required_customer_name</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: bold; color: #ef4444;">2</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace;">missing_required_joining_date</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: bold; color: #ef4444;">4</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace;">range_age_below_min</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: bold; color: #ef4444;">2</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace;">range_age_above_max</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: bold; color: #ef4444;">1</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace;">range_salary_below_min</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: bold; color: #ef4444;">2</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-family: monospace;">regex_email</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: bold; color: #ef4444;">2</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Executive Audit Summary</h2>
+            <p><strong>Input Dataset:</strong> data\raw\sample_messy_data.csv</p>
+            <p><strong>Cleaned Dataset:</strong> data\output\cleaned_data.csv</p>
+            <p><strong>Quarantined Records:</strong> data\output\invalid_records.csv</p>
+            <p><strong>Validation Rate:</strong> 88.7%</p>
+            <p><strong>Dropped Empty Columns:</strong> notes</p>
+        </div>
+
+        <div class="footer">
+            Generated autonomously by Datheon Automated Data Cleaning & Schema Transformation System
+        </div>
+    </div>
+</body>
+</html>

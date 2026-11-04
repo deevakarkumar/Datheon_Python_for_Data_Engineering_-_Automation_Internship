@@ -1,0 +1,14 @@
+customer_id,customer_name,age,email,phone,salary,joining_date,city,is_active,rejection_reasons
+1004,Diya Singh,31,invalid-email-format,+91-8445662585,61793.0,2021-08-01,Bengaluru,False,Value 'invalid-email-format' in 'email' does not match pattern '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+1005,,24,saanvi.singh68@example.com,+91-9303082117,67722.0,2023-01-15,Pune,False,Missing mandatory field 'customer_name'
+1010,Vivaan Rao,47,vivaan.rao44@example.com,+91-7284277889,90307.0,,Hyderabad,False,Missing mandatory field 'joining_date'
+1019,Rohan Chatterjee,-4,rohan.chatterjee79@example.com,+91-9962958940,87730.5,2024-05-10,Kolkata,False,Value -4 in 'age' is below minimum threshold (18)
+1023,Chiara Chatterjee,34,chiara.chatterjee22@example.com,+91-7416314667,-45000.0,2024-05-10,Kolkata,False,Value -45000.0 in 'salary' is below minimum threshold (0)
+1032,,64,aditya.chatterjee84@example.com,+91-9427631155,172044.0,2024-05-10,Hyderabad,False,Missing mandatory field 'customer_name'
+1035,Saanvi Patel,37,saanvi.patel57@example.com,+91-8224011538,76352.0,,Pune,False,Missing mandatory field 'joining_date'
+1040,Aditya Reddy,56,invalid-email-format,+91-8585770584,187701.0,2022-11-20,Kolkata,True,Value 'invalid-email-format' in 'email' does not match pattern '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+1050,Ishaan Chatterjee,42,ishaan.chatterjee61@example.com,+91-9994487334,112504.0,,Hyderabad,False,Missing mandatory field 'joining_date'
+1070,Sneha Mehta,32,sneha.mehta49@example.com,+91-7464280597,186698.0,,Kolkata,False,Missing mandatory field 'joining_date'
+1077,Sneha Singh,165,sneha.singh11@example.com,+91-9218897149,85084.0,2022-11-20,Kolkata,False,Value 165 in 'age' exceeds maximum threshold (100)
+1088,Neha Mehta,35,neha.mehta90@example.com,+91-7906346324,-20000.0,2023-01-15,Delhi,True,Value -20000.0 in 'salary' is below minimum threshold (0)
+1093,Amit Kumar,14,amit.kumar44@example.com,+91-9149511642,176552.0,2021-08-01,Bengaluru,False,Value 14 in 'age' is below minimum threshold (18)

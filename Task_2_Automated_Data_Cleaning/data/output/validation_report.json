@@ -1,0 +1,261 @@
+{
+  "project_name": "Automated Data Cleaning & Schema Transformation",
+  "input_file": "data\\raw\\sample_messy_data.csv",
+  "execution_timestamp": "2026-11-05T00:32:09.539191",
+  "execution_duration_seconds": 0.288,
+  "processing_status": "SUCCESS",
+  "original_record_count": 120,
+  "final_clean_record_count": 102,
+  "quarantined_record_count": 13,
+  "duplicates_removed_count": 5,
+  "missing_values_handled_count": 7,
+  "profiling_initial": {
+    "total_records": 120,
+    "total_columns": 10,
+    "exact_duplicate_rows": 3,
+    "empty_columns": [],
+    "column_statistics": {
+      "Cust_ID ": {
+        "inferred_type": "str",
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "unique_values": 115
+      },
+      " Customer Name": {
+        "inferred_type": "str",
+        "missing_count": 2,
+        "missing_percentage": 1.67,
+        "unique_values": 104
+      },
+      " Age": {
+        "inferred_type": "str",
+        "missing_count": 2,
+        "missing_percentage": 1.67,
+        "unique_values": 41
+      },
+      "Email_Address ": {
+        "inferred_type": "str",
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "unique_values": 114
+      },
+      "Phone Number": {
+        "inferred_type": "str",
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "unique_values": 115
+      },
+      "Annual Income ": {
+        "inferred_type": "str",
+        "missing_count": 2,
+        "missing_percentage": 1.67,
+        "unique_values": 114
+      },
+      "Join_Date": {
+        "inferred_type": "str",
+        "missing_count": 1,
+        "missing_percentage": 0.83,
+        "unique_values": 22
+      },
+      "City ": {
+        "inferred_type": "str",
+        "missing_count": 2,
+        "missing_percentage": 1.67,
+        "unique_values": 8
+      },
+      "Active Status": {
+        "inferred_type": "str",
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "unique_values": 10
+      },
+      "Notes": {
+        "inferred_type": "str",
+        "missing_count": 118,
+        "missing_percentage": 98.33,
+        "unique_values": 1
+      }
+    },
+    "numerical_outliers": {
+      " Age": {
+        "q1": 31.25,
+        "q3": 51.5,
+        "iqr": 20.25,
+        "lower_bound": 0.88,
+        "upper_bound": 81.88,
+        "outlier_count": 2,
+        "sample_outliers": [
+          -4.0,
+          165.0
+        ]
+      }
+    }
+  },
+  "currency_normalization_audit": {
+    "salary": {
+      "total_records": 120,
+      "valid_normalized": 117,
+      "unparseable_records": 3,
+      "detected_currency_symbols": [
+        "Rs",
+        "\u20b9",
+        "Rs.",
+        "INR"
+      ],
+      "target_currency": "INR"
+    }
+  },
+  "date_normalization_audit": {
+    "joining_date": {
+      "column_name": "joining_date",
+      "total_records": 120,
+      "valid_dates": 116,
+      "invalid_dates": 3,
+      "invalid_samples": [
+        "99/99/9999",
+        "not_a_date"
+      ],
+      "day_first_used": true,
+      "target_format": "%Y-%m-%d"
+    }
+  },
+  "missing_values_audit": {
+    "dropped_columns": [
+      "notes"
+    ],
+    "imputation_operations": [
+      {
+        "column": "age",
+        "type": "numerical",
+        "strategy": "median",
+        "fill_value": 42.0,
+        "records_imputed": 2
+      },
+      {
+        "column": "salary",
+        "type": "numerical",
+        "strategy": "mean",
+        "fill_value": 131630.06,
+        "records_imputed": 3
+      },
+      {
+        "column": "city",
+        "type": "categorical",
+        "strategy": "mode",
+        "fill_value": "Mumbai",
+        "records_imputed": 2
+      }
+    ],
+    "total_imputed_cells": 7,
+    "critical_missing_counts": {
+      "customer_id": 0,
+      "customer_name": 2
+    }
+  },
+  "duplicate_audit": {
+    "initial_rows": 120,
+    "exact_duplicates_removed": 3,
+    "subset_duplicates_removed": 2,
+    "total_duplicates_removed": 5,
+    "final_rows": 115,
+    "subset_columns": [
+      "customer_id"
+    ]
+  },
+  "schema_audit": {
+    "standardized_headers": {
+      "Cust_ID ": "cust_id",
+      " Customer Name": "customer_name",
+      " Age": "age",
+      "Email_Address ": "email_address",
+      "Phone Number": "phone_number",
+      "Annual Income ": "annual_income",
+      "Join_Date": "join_date",
+      "City ": "city",
+      "Active Status": "active_status",
+      "Notes": "notes"
+    },
+    "renamed_columns": {
+      "cust_id": "customer_id",
+      "customer_name": "customer_name",
+      "age": "age",
+      "email_address": "email",
+      "phone_number": "phone",
+      "annual_income": "salary",
+      "join_date": "joining_date",
+      "city": "city",
+      "active_status": "is_active",
+      "notes": "notes"
+    },
+    "type_changes": {
+      "customer_id": {
+        "from": "str",
+        "to": "Int64"
+      },
+      "customer_name": {
+        "from": "str",
+        "to": "string"
+      },
+      "age": {
+        "from": "float64",
+        "to": "Int64"
+      },
+      "email": {
+        "from": "str",
+        "to": "string"
+      },
+      "phone": {
+        "from": "str",
+        "to": "string"
+      },
+      "salary": {
+        "from": "float64",
+        "to": "float64"
+      },
+      "joining_date": {
+        "from": "str",
+        "to": "string"
+      },
+      "city": {
+        "from": "str",
+        "to": "string"
+      },
+      "is_active": {
+        "from": "str",
+        "to": "boolean"
+      }
+    },
+    "final_column_order": [
+      "customer_id",
+      "customer_name",
+      "age",
+      "email",
+      "phone",
+      "salary",
+      "joining_date",
+      "city",
+      "is_active"
+    ]
+  },
+  "validation_summary": {
+    "total_records_evaluated": 115,
+    "valid_records_count": 102,
+    "quarantined_records_count": 13,
+    "pass_rate_percentage": 88.7,
+    "rule_violation_breakdown": {
+      "missing_required_customer_name": 2,
+      "missing_required_joining_date": 4,
+      "range_age_below_min": 2,
+      "range_age_above_max": 1,
+      "range_salary_below_min": 2,
+      "regex_email": 2
+    }
+  },
+  "output_files": {
+    "cleaned_data": "data\\output\\cleaned_data.csv",
+    "quarantined_records": "data\\output\\invalid_records.csv",
+    "validation_report": "data\\output\\validation_report.json",
+    "html_summary": "data\\output\\cleaning_summary.html",
+    "log_file": "data\\output\\cleaning.log"
+  }
+}
