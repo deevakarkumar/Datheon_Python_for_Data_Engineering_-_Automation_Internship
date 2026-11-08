@@ -1,0 +1,106 @@
+student_id,student_name,email,course,marks,enrollment_date,last_updated
+STU001,Vikram Sharma,vikram.sharma1@university.edu,Software Engineering,67.0,2024-02-05,2024-02-05 09:00:00
+STU002,Neha Iyer,neha.iyer2@university.edu,Software Engineering,93.8,2024-01-19,2024-01-19 09:00:00
+STU003,Nikhil Verma,nikhil.verma3@university.edu,Computer Science,59.1,2024-02-17,2024-02-17 09:00:00
+STU004,Aditi Mishra,aditi.mishra4@university.edu,Data Science,86.1,2024-04-08,2024-04-08 09:00:00
+STU005,Akanksha Pandey,akanksha.pandey5@university.edu,Artificial Intelligence,90.2,2024-01-25,2024-01-25 09:00:00
+STU006,Kavya Banerjee,kavya.banerjee6@university.edu,Cybersecurity,69.8,2024-02-07,2024-02-07 09:00:00
+STU007,Manish Malhotra,manish.malhotra7@university.edu,Computer Science,71.5,2024-03-28,2024-03-28 09:00:00
+STU008,Divya Saxena,divya.saxena8@university.edu,Artificial Intelligence,90.1,2024-04-18,2024-04-18 09:00:00
+STU009,Vikram Chopra,vikram.chopra9@university.edu,Computer Science,79.0,2024-03-19,2024-03-19 09:00:00
+STU010,Diya Banerjee,diya.banerjee10@university.edu,Computer Science,57.0,2024-02-25,2024-02-25 09:00:00
+STU011,Tanvi Gupta,tanvi.gupta11@university.edu,Data Science,92.7,2024-04-09,2024-04-09 09:00:00
+STU012,Kunal Bhatia,kunal.bhatia12@university.edu,Artificial Intelligence,62.1,2024-03-07,2024-03-07 09:00:00
+STU013,Karan Banerjee,karan.banerjee13@university.edu,Software Engineering,83.2,2024-02-18,2024-02-18 09:00:00
+STU014,Varun Patel,varun.patel14@university.edu,Cybersecurity,71.5,2024-02-22,2024-02-22 09:00:00
+STU015,Rhea Verma,rhea.verma15@university.edu,Data Science,90.7,2024-03-13,2024-03-13 09:00:00
+STU016,Karan Gupta,karan.gupta16@university.edu,Data Science,94.7,2024-03-07,2024-03-07 09:00:00
+STU017,Deepak Chopra,deepak.chopra17@university.edu,Software Engineering,75.0,2024-03-05,2024-03-05 09:00:00
+STU018,Varun Mishra,varun.mishra18@university.edu,Cloud Computing,66.4,2024-04-19,2024-04-19 09:00:00
+STU019,Gaurav Rao,gaurav.rao19@university.edu,Data Science,98.4,2024-02-17,2024-02-17 09:00:00
+STU020,Deepak Gupta,deepak.gupta20@university.edu,Computer Science,92.5,2024-02-21,2024-02-21 09:00:00
+STU021,Kavya Iyer,kavya.iyer21@university.edu,Cybersecurity,80.9,2024-04-13,2024-04-13 09:00:00
+STU022,Kunal Kapoor,kunal.kapoor22@university.edu,Artificial Intelligence,97.2,2024-01-22,2024-01-22 09:00:00
+STU023,Vikram Iyer,vikram.iyer23@university.edu,Cloud Computing,87.7,2024-03-04,2024-03-04 09:00:00
+STU024,Tanvi Reddy,tanvi.reddy24@university.edu,Data Science,74.7,2024-03-17,2024-03-17 09:00:00
+STU025,Amit Kapoor,amit.kapoor25@university.edu,Computer Science,92.9,2024-03-27,2024-03-27 09:00:00
+STU026,Diya Mehta,diya.mehta26@university.edu,Artificial Intelligence,88.2,2024-01-20,2024-01-20 09:00:00
+STU027,Rhea Chatterjee,rhea.chatterjee27@university.edu,Computer Science,59.9,2024-03-27,2024-03-27 09:00:00
+STU028,Aditya Kumar,aditya.kumar28@university.edu,Computer Science,65.5,2024-01-03,2024-01-03 09:00:00
+STU029,Deepak Gupta,deepak.gupta29@university.edu,Cloud Computing,88.3,2024-02-22,2024-02-22 09:00:00
+STU030,Shreya Mishra,shreya.mishra30@university.edu,Data Science,66.5,2024-04-07,2024-04-07 09:00:00
+STU031,Diya Banerjee,diya.banerjee31@university.edu,Artificial Intelligence,72.4,2024-03-15,2024-03-15 09:00:00
+STU032,Akanksha Malhotra,akanksha.malhotra32@university.edu,Data Science,64.8,2024-03-01,2024-03-01 09:00:00
+STU033,Pooja Pandey,pooja.pandey33@university.edu,Data Science,55.3,2024-01-08,2024-01-08 09:00:00
+STU034,Ananya Verma,ananya.verma34@university.edu,Artificial Intelligence,58.1,2024-02-09,2024-02-09 09:00:00
+STU035,Deepak Singh,deepak.singh35@university.edu,Cloud Computing,60.8,2024-04-08,2024-04-08 09:00:00
+STU036,Shreya Reddy,shreya.reddy36@university.edu,Data Science,59.1,2024-04-12,2024-04-12 09:00:00
+STU037,Nikhil Reddy,nikhil.reddy37@university.edu,Cybersecurity,92.6,2024-01-22,2024-01-22 09:00:00
+STU038,Neha Verma,neha.verma38@university.edu,Cybersecurity,86.7,2024-01-08,2024-01-08 09:00:00
+STU039,Diya Singh,diya.singh39@university.edu,Cloud Computing,74.5,2024-04-06,2024-04-06 09:00:00
+STU040,Karan Das,karan.das40@university.edu,Data Science,93.0,2024-01-15,2024-01-15 09:00:00
+STU041,Neha Verma,neha.verma41@university.edu,Computer Science,100.0,2024-01-03,2024-05-10 14:30:00
+STU042,Varun Patel,varun.patel42@university.edu,Cloud Computing,79.4,2024-02-28,2024-05-10 14:30:00
+STU043,Gaurav Verma,gaurav.verma43@university.edu,Artificial Intelligence,79.3,2024-04-09,2024-05-10 14:30:00
+STU044,Kunal Bose,kunal.bose44@university.edu,Cloud Computing,88.5,2024-04-05,2024-05-10 14:30:00
+STU045,Diya Bose,diya.bose45@university.edu,Artificial Intelligence,100.0,2024-01-24,2024-05-10 14:30:00
+STU046,Rhea Verma,rhea.verma46@university.edu,Data Science,84.6,2024-02-02,2024-05-10 14:30:00
+STU047,Rahul Patel,rahul.patel47@university.edu,Data Science,88.1,2024-02-13,2024-05-10 14:30:00
+STU048,Vikram Pandey,vikram.pandey48@university.edu,Artificial Intelligence,86.3,2024-01-20,2024-05-10 14:30:00
+STU049,Rahul Reddy,rahul.reddy49@university.edu,Computer Science,84.6,2024-03-09,2024-05-10 14:30:00
+STU050,Arjun Iyer,arjun.iyer50@university.edu,Computer Science,74.1,2024-03-13,2024-05-10 14:30:00
+STU051,Sanya Iyer,sanya.iyer51@university.edu,Computer Science,71.6,2024-03-25,2024-05-10 14:30:00
+STU052,Ananya Sharma,ananya.sharma52@university.edu,Cloud Computing,89.7,2024-01-03,2024-05-10 14:30:00
+STU053,Arjun Kapoor,arjun.kapoor53@university.edu,Cybersecurity,66.1,2024-03-03,2024-05-10 14:30:00
+STU054,Varun Rao,varun.rao54@university.edu,Cybersecurity,66.2,2024-03-20,2024-05-10 14:30:00
+STU055,Aarav Iyer,aarav.iyer55@university.edu,Software Engineering,72.8,2024-01-05,2024-05-10 14:30:00
+STU056,Sneha Malhotra,sneha.malhotra56@university.edu,Data Science,93.3,2024-02-09,2024-05-10 14:30:00
+STU057,Tanvi Saxena,tanvi.saxena57@university.edu,Artificial Intelligence,94.0,2024-02-22,2024-05-10 14:30:00
+STU058,Sneha Kapoor,sneha.kapoor58@university.edu,Cloud Computing,72.5,2024-01-03,2024-05-10 14:30:00
+STU059,Nikhil Joshi,nikhil.joshi59@university.edu,Data Science,62.1,2024-02-21,2024-05-10 14:30:00
+STU060,Sneha Patel,sneha.patel60@university.edu,Computer Science,78.0,2024-04-18,2024-05-10 14:30:00
+STU061,Aarav Malhotra,aarav.malhotra61@university.edu,Data Science,100.0,2024-02-18,2024-05-10 14:30:00
+STU062,Rohan Rao,rohan.rao62@university.edu,Software Engineering,84.9,2024-04-05,2024-05-10 14:30:00
+STU063,Rohan Bose,rohan.bose63@university.edu,Cybersecurity,100.0,2024-01-12,2024-05-10 14:30:00
+STU064,Arjun Iyer,arjun.iyer64@university.edu,Artificial Intelligence,89.9,2024-03-25,2024-05-10 14:30:00
+STU065,Simran Saxena,simran.saxena65@university.edu,Computer Science,69.2,2024-02-28,2024-05-10 14:30:00
+STU106,Meera Chopra,meera.chopra106@university.edu,Software Engineering,67.7,2024-05-01,2024-05-01 10:00:00
+STU107,Varun Malhotra,varun.malhotra107@university.edu,Software Engineering,90.1,2024-05-01,2024-05-01 10:00:00
+STU108,Vikram Pandey,vikram.pandey108@university.edu,Computer Science,73.5,2024-05-01,2024-05-01 10:00:00
+STU109,Nikhil Iyer,nikhil.iyer109@university.edu,Artificial Intelligence,62.7,2024-05-01,2024-05-01 10:00:00
+STU110,Manish Sharma,manish.sharma110@university.edu,Cybersecurity,92.1,2024-05-01,2024-05-01 10:00:00
+STU111,Neha Reddy,neha.reddy111@university.edu,Artificial Intelligence,84.8,2024-05-01,2024-05-01 10:00:00
+STU112,Kunal Banerjee,kunal.banerjee112@university.edu,Data Science,77.0,2024-05-01,2024-05-01 10:00:00
+STU113,Karan Saxena,karan.saxena113@university.edu,Cloud Computing,90.2,2024-05-01,2024-05-01 10:00:00
+STU114,Kunal Reddy,kunal.reddy114@university.edu,Software Engineering,83.1,2024-05-01,2024-05-01 10:00:00
+STU115,Rhea Kumar,rhea.kumar115@university.edu,Computer Science,70.9,2024-05-01,2024-05-01 10:00:00
+STU116,Akanksha Kumar,akanksha.kumar116@university.edu,Cybersecurity,82.2,2024-05-01,2024-05-01 10:00:00
+STU117,Meera Nair,meera.nair117@university.edu,Computer Science,79.3,2024-05-01,2024-05-01 10:00:00
+STU118,Rhea Patel,rhea.patel118@university.edu,Cybersecurity,68.3,2024-05-01,2024-05-01 10:00:00
+STU119,Sneha Nair,sneha.nair119@university.edu,Artificial Intelligence,94.3,2024-05-01,2024-05-01 10:00:00
+STU120,Karan Mishra,karan.mishra120@university.edu,Computer Science,80.1,2024-05-01,2024-05-01 10:00:00
+STU121,Diya Gupta,diya.gupta121@university.edu,Data Science,88.1,2024-05-01,2024-05-01 10:00:00
+STU122,Deepak Mishra,deepak.mishra122@university.edu,Data Science,86.9,2024-05-01,2024-05-01 10:00:00
+STU123,Deepak Das,deepak.das123@university.edu,Computer Science,63.6,2024-05-01,2024-05-01 10:00:00
+STU124,Pooja Chopra,pooja.chopra124@university.edu,Software Engineering,69.5,2024-05-01,2024-05-01 10:00:00
+STU125,Siddharth Chatterjee,siddharth.chatterjee125@university.edu,Cloud Computing,80.7,2024-05-01,2024-05-01 10:00:00
+STU126,Nikhil Mishra,nikhil.mishra126@university.edu,Artificial Intelligence,73.7,2024-05-01,2024-05-01 10:00:00
+STU127,Kunal Joshi,kunal.joshi127@university.edu,Artificial Intelligence,69.8,2024-05-01,2024-05-01 10:00:00
+STU128,Vikram Singh,vikram.singh128@university.edu,Artificial Intelligence,64.7,2024-05-01,2024-05-01 10:00:00
+STU129,Amit Singh,amit.singh129@university.edu,Data Science,88.8,2024-05-01,2024-05-01 10:00:00
+STU130,Karan Pandey,karan.pandey130@university.edu,Cloud Computing,83.3,2024-05-01,2024-05-01 10:00:00
+STU131,Neha Singh,neha.singh131@university.edu,Artificial Intelligence,68.9,2024-05-01,2024-05-01 10:00:00
+STU132,Amit Bose,amit.bose132@university.edu,Computer Science,87.6,2024-05-01,2024-05-01 10:00:00
+STU133,Sanya Joshi,sanya.joshi133@university.edu,Computer Science,98.0,2024-05-01,2024-05-01 10:00:00
+STU134,Tanvi Banerjee,tanvi.banerjee134@university.edu,Data Science,84.9,2024-05-01,2024-05-01 10:00:00
+STU135,Deepak Malhotra,deepak.malhotra135@university.edu,Computer Science,82.4,2024-05-01,2024-05-01 10:00:00
+STU136,Shreya Chatterjee,shreya.chatterjee136@university.edu,Cybersecurity,73.3,2024-05-01,2024-05-01 10:00:00
+STU137,Priya Joshi,priya.joshi137@university.edu,Cybersecurity,64.4,2024-05-01,2024-05-01 10:00:00
+STU138,Ananya Chopra,ananya.chopra138@university.edu,Cybersecurity,62.9,2024-05-01,2024-05-01 10:00:00
+STU139,Priya Mehta,priya.mehta139@university.edu,Data Science,91.6,2024-05-01,2024-05-01 10:00:00
+STU140,Aditya Gupta,aditya.gupta140@university.edu,Data Science,64.6,2024-05-01,2024-05-01 10:00:00
+STU991,Test Student NegativeMarks,test.negative@university.edu,Data Science,-15.5,2024-05-02,2024-05-02 11:00:00
+STU992,,missing.name@university.edu,Artificial Intelligence,85.0,2024-05-02,2024-05-02 11:00:00
+STU993,Test Student BadEmail,invalid-email-address-no-at-domain,Cybersecurity,78.0,2024-05-02,2024-05-02 11:00:00
+STU994,Test Student OverMarks,over.marks@university.edu,Cloud Computing,145.0,2024-05-02,2024-05-02 11:00:00
+STU995,Test Student BadDate,bad.date@university.edu,Software Engineering,82.0,99/99/9999,2024-05-02 11:00:00

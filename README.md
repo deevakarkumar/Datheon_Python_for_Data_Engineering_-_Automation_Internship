@@ -1,176 +1,200 @@
 # Datheon Python for Data Engineering & Automation Internship
 
 [![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/)
-[![Tests](https://img.shields.io/badge/pytest-31%20passed-brightgreen.svg)](Task_2_Automated_Data_Cleaning/tests/)
+[![Total Tests](https://img.shields.io/badge/pytest-48%20passed%20(31%20+%2017)-brightgreen.svg)](tests/)
+[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0+-red.svg)](https://www.sqlalchemy.org/)
+[![Database](https://img.shields.io/badge/Database-SQLite%203-003B57.svg)](https://www.sqlite.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Interactive%20UI-FF4B4B.svg)](https://streamlit.io/)
 [![Code Style](https://img.shields.io/badge/Code%20Style-PEP%208-informational.svg)](https://pep8.org/)
 [![Internship](https://img.shields.io/badge/Internship-Datheon-orange.svg)]()
 
 > **Candidate:** Deevakar Kumar  
-> **Track:** Python for Data Engineering & Automation Internship  
+> **Internship Track:** Python for Data Engineering & Automation Internship  
 > **Host Organization:** Datheon  
-> **Repository:** `Datheon_Python_for_Data_Engineering_-_Automation_Internship`
+> **Public Repository:** `Datheon_Python_for_Data_Engineering_-_Automation_Internship`
 
 ---
 
-## 📌 Repository Overview
+## 📌 Internship Portfolio Overview
 
-This repository houses the end-to-end deliverables for the **Datheon Python for Data Engineering & Automation Internship**. Each task is organized in a self-contained, modular directory equipped with its own source code, automated test suite, configuration schemas, and documentation.
+This repository contains the completed, production-ready deliverables for the **Datheon Python for Data Engineering & Automation Internship**. Both required milestones have been implemented from scratch following modular, decoupled enterprise design patterns, ACID-compliant database transactions, automated data quality gates, and exhaustive **pytest** test suites.
 
-| Milestone | Task Description | Status | Primary Technologies |
-| :---: | :--- | :---: | :--- |
-| **Task 2** | **Automated Data Cleaning & Schema Transformation Engine** |  **Completed** | Python, Pandas, NumPy, Pytest, Streamlit, JSON |
-| **Task 3** | **Upcoming Data Engineering & Automation Milestone** | 🔄 *Next Deliverable* | Python, Automation & Data Systems |
+| Milestone | Project Title | Status | Automated Tests | Technologies |
+| :---: | :--- | :---: | :---: | :--- |
+| **Task 2** | **Automated Data Cleaning & Schema Transformation Engine** | **Completed** | **31 Passed** | Python, Pandas, NumPy, Pytest, Streamlit, JSON |
+| **Task 3** | **Relational Database Auto-Ingestion & Upsert Engine** | **Completed** | **17 Passed** | Python, SQLAlchemy 2.0, SQLite, Pandas, Pytest, Argparse |
+| **Total** | **End-to-End Data Engineering Pipeline Deliverables** | **100% Ready** | **48 Passed** | Production Data Engineering Architecture |
 
 ---
 
 ## ⚡ Task 2: Automated Data Cleaning & Schema Transformation Engine
 
-A production-style, rule-driven ETL pipeline designed to ingest unstandardized CSV files, normalize disparate data conventions, prune corrupt records, enforce schema contracts, and generate executive audit dashboards.
+A modular, rule-driven ETL pipeline designed to ingest messy CSV files across multi-encodings, normalize currencies and ambiguous dates, impute missing values, prune non-informative attributes, and quarantine corrupt rows into an audited dataset.
 
 ### 🖼️ Pipeline Architecture & Workflow
 
-![Pipeline Architecture](screenshots/architecture_diagram.png)
+![Task 2 Pipeline Architecture](screenshots/architecture_diagram.png)
 
-```
-[ Dirty CSV ] ──▶ [ Ingestion & Profiling ] ──▶ [ Normalization & Imputation ] ──▶ [ Data Quarantine Protocol ]
-                                                                                           │
-                                                                   ┌───────────────────────┴───────────────────────┐
-                                                                   ▼                                               ▼
-                                                          [ Clean Production Data ]                      [ Quarantined Records ]
-                                                             cleaned_data.csv                              invalid_records.csv
-```
+### 🌟 Key Highlights
+- **Vectorized Normalization**: Converts mixed currencies (`₹`, `INR`, `Rs.`, `$`, `€`) and polymorphic date formats into clean `float64` and ISO `YYYY-MM-DD`.
+- **Data Quarantine Protocol**: Isolates invalid records to `invalid_records.csv` with explicit `rejection_reasons`.
+- **Interactive Streamlit Web Dashboard**: Live web UI (`streamlit run app.py`) with side-by-side table comparisons and CSV export.
+- **Executive Audit Dashboard**: Automatically outputs a styled, zero-dependency HTML dashboard (`cleaning_summary.html`).
 
----
+![Task 2 Executive HTML Dashboard](screenshots/executive_dashboard.png)
 
-### 🌟 Key Engineering Highlights
-
-1. **Multi-Encoding Ingestion**: Automatically detects and falls back across `utf-8`, `latin1`, and `cp1252` encodings while guarding against 0-byte corrupted files.
-2. **Automated Diagnostic Profiler**: Pre-cleaning inspection extracting null percentages, uniqueness cardinalities, and statistical outliers via **Interquartile Range ($IQR = Q_3 - Q_1$)**.
-3. **Deterministic Currency & Date Normalizer**: Strips international currency markers (`₹`, `INR`, `Rs.`, `$`, `€`, accounting negatives `(1,500)`) into `float64` and parses polymorphic date conventions into ISO `YYYY-MM-DD`.
-4. **Data Quarantine Protocol**: Isolates corrupt and out-of-boundary records into `invalid_records.csv` alongside granular `rejection_reasons` rather than silently dropping data.
-5. **Interactive Streamlit Web Dashboard**: Visual UI allowing users to upload datasets, inspect live transformations, and download cleaned or quarantined datasets.
-6. **Executive Audit Reporting**: Exports machine-readable `validation_report.json` and a styled HTML quality dashboard (`cleaning_summary.html`).
-7. **Production Logging**: Employs Python `RotatingFileHandler` (5MB rollover, 3 backups) to eliminate storage bloat.
-
----
-
-### 📊 Executive Quality Dashboard Preview
-
-The pipeline automatically compiles an executive visual HTML report summarizing transformation metrics, column type migrations, and constraint violations:
-
-![Executive HTML Dashboard](screenshots/executive_dashboard.png)
-
----
-
-### 🧪 Automated Test Suite (31 Passed)
-
-The project includes an automated **pytest** test suite with 31 unit, integration, and negative boundary test cases covering empty DataFrames, structural corruption, date disambiguation, and schema integrity:
-
-![Pytest Test Results](screenshots/pytest_results.png)
-
-```cmd
-============================= 31 passed in 1.90s ==============================
-```
-
----
-
-### 🚀 Quickstart & How to Run Task 2
-
-#### 1. Setup Virtual Environment
 ```powershell
-# Clone the repository
-git clone https://github.com/deevakarkumar/Datheon_Python_for_Data_Engineering_-_Automation_Internship.git
-cd Datheon_Python_for_Data_Engineering_-_Automation_Internship/Task_2_Automated_Data_Cleaning
-
-# Create and activate virtual environment
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-#### 2. Launch Interactive Streamlit Web UI
-```powershell
-streamlit run app.py
-```
-*Open your browser at `http://localhost:8501` to test with sample data or upload custom files.*
-
-#### 3. Run Pipeline via Command-Line Interface (CLI)
-```powershell
-# Run end-to-end cleaning pipeline
+# Run Task 2 CLI
+cd Task_2_Automated_Data_Cleaning
 python main.py
 
-# Profile dataset without modifying data
-python main.py --profile-only
+# Run Task 2 Web Dashboard
+streamlit run app.py
 
-# Run with custom input and verbose debug logs
-python main.py -i data/raw/sample_messy_data.csv -c config/schema_config.json -o data/output --verbose
-```
-
-#### 4. Run Automated Pytest Suite
-```powershell
+# Run Task 2 Automated Tests (31 Passed)
 pytest -v
 ```
 
+![Task 2 Pytest Test Results](screenshots/pytest_results.png)
+
 ---
 
-### 📁 Repository Structure
+## 🗄️ Task 3: Relational Database Auto-Ingestion & Upsert Engine
+
+An automated, transaction-safe ingestion system that reads structured CSV data, enforces data quality boundaries, and automatically executes batched **INSERT OR UPDATE (upsert)** operations into an SQLite relational database without creating duplicate records or redundant writes.
+
+### 🖼️ Upsert Architecture & Data Flow
+
+```mermaid
+flowchart TD
+    A["Raw Incoming CSV File"] --> B["IngestionPipeline (src/ingestion.py)"]
+    B --> C["DataValidator (src/validation.py)"]
+    
+    C -->|"Invalid Records (Marks < 0, Bad Email)"| D["data/rejected_records.csv (Quarantined)"]
+    C -->|"Valid Records"| E["UpsertEngine (src/upsert.py)"]
+    
+    E --> F["Batch Partitioner (Default: 50 records)"]
+    F --> G["Batch ID Query (SELECT WHERE id IN ...)"]
+    
+    G --> H{"Diff Check"}
+    H -->|"Not in DB"| I["Bulk INSERT (New Records)"]
+    H -->|"In DB & Values Changed"| J["Bulk UPDATE (Existing Records)"]
+    H -->|"In DB & Values Identical"| K["PRESERVE (Unchanged Records)"]
+    
+    I --> L["Atomic Transaction Commit"]
+    J --> L
+    K --> L
+    
+    L --> M[("SQLite Relational Database (students)")]
+    L --> N["Dynamic Ingestion Summary Report"]
+```
+
+### 🌟 Key Highlights
+- **Intelligent Field-Level Diffing**: Detects new vs. modified vs. unchanged records. Unchanged records trigger zero redundant writes.
+- **Strict Data Quality Gate**: Validates email regex, enforces marks within $[0.0, 100.0]$, checks ISO date formatting, and quarantines intra-batch duplicate keys.
+- **Transactional Atomicity**: Built on SQLAlchemy 2.0 session contexts (`with get_session()`), ensuring automatic rollback on failure and 100% database consistency.
+- **Self-Healing Verification**: Built-in verification module executing SQLite `PRAGMA integrity_check` and confirming 0 duplicate primary keys or emails.
+
+### 📊 Dynamic Execution Report
+
+![Task 3 Ingestion Report](screenshots/task3_ingestion_report.png)
+
+```powershell
+# 1. Initialize Relational Database Schema
+cd Task_3_Database_Auto_Ingestion_Upsert
+python main.py init
+
+# 2. Ingest Initial Dataset (105 Fresh Inserts)
+python main.py ingest --file data/students.csv
+
+# 3. Ingest Updated Dataset (Demonstrating Upsert & Quarantine)
+python main.py ingest --file data/students_updated.csv --batch-size 50
+
+# 4. Verify Database Integrity & Constraints
+python main.py verify
+
+# 5. Inspect Stored Database Records
+python main.py report --limit 10
+
+# 6. Run Task 3 Automated Tests (17 Passed)
+pytest -v
+```
+
+![Task 3 Pytest Test Results](screenshots/task3_pytest_results.png)
+
+---
+
+## 📁 Repository Structure
 
 ```text
 Datheon_Python_for_Data_Engineering_-_Automation_Internship/
 │
 ├── README.md                                  # Master internship documentation
-├── requirements.txt                           # Project-wide dependencies
-├── screenshots/                               # Visual previews & test execution cards
+├── requirements.txt                           # Global project dependencies
+├── screenshots/                               # Visual dashboards & pytest execution cards
 │   ├── architecture_diagram.png
 │   ├── executive_dashboard.png
-│   └── pytest_results.png
+│   ├── pytest_results.png
+│   ├── task3_ingestion_report.png
+│   └── task3_pytest_results.png
 │
-├── Task_2_Automated_Data_Cleaning/            # Milestone 2 Root
-│   ├── app.py                                 # Interactive Streamlit Web Application
+├── Task_2_Automated_Data_Cleaning/            # Milestone 2: Cleaning & Schema Transformation
+│   ├── app.py                                 # Interactive Streamlit Web UI
 │   ├── main.py                                # CLI execution entry point
-│   ├── requirements.txt                       # Task-specific dependencies
+│   ├── requirements.txt                       # Task 2 dependencies
 │   ├── README.md                              # Deep-dive technical documentation
-│   │
 │   ├── config/
-│   │   └── schema_config.json                 # Decoupled schema, casting & validation rules
-│   │
+│   │   └── schema_config.json                 # Decoupled schema & validation rules
 │   ├── data/
-│   │   ├── raw/
-│   │   │   └── sample_messy_data.csv          # Real-world dirty dataset (120 rows)
-│   │   └── output/
-│   │       ├── cleaned_data.csv               # Type-safe production dataset
-│   │       ├── invalid_records.csv            # Quarantined rows with rejection reasons
-│   │       ├── validation_report.json         # Machine-readable audit metrics
-│   │       ├── cleaning_summary.html          # Executive quality dashboard
-│   │       └── cleaning.log                   # Rotating execution trace
-│   │
+│   │   ├── raw/sample_messy_data.csv          # Real-world dirty dataset (120 rows)
+│   │   └── output/                            # Clean data, quarantine CSV & HTML reports
 │   ├── src/                                   # Single-responsibility ETL modules
-│   │   ├── loader.py                          # Resilient multi-encoding ingestion
-│   │   ├── profiler.py                        # Pre-cleaning statistics & IQR outliers
-│   │   ├── currency.py                        # Vectorized currency normalizer
-│   │   ├── dates.py                           # ISO date standardization engine
-│   │   ├── missing_values.py                  # Missing value imputation & pruning
-│   │   ├── duplicates.py                      # Exact & primary key deduplication
-│   │   ├── schema_transformer.py              # Snake_casing, aliases & type casting
-│   │   ├── validator.py                       # Business rules & quarantine engine
-│   │   ├── reporter.py                        # HTML & JSON report generators
-│   │   └── pipeline.py                        # Orchestrator & rotating file logger
-│   │
-│   └── tests/                                 # Pytest automated test suite (31 tests)
-│       ├── test_loader.py
-│       ├── test_currency.py
-│       ├── test_dates.py
-│       ├── test_cleaning.py
-│       ├── test_schema.py
-│       ├── test_validation.py
-│       ├── test_edge_cases.py
-│       └── test_pipeline.py
+│   └── tests/                                 # Pytest test suite (31 tests passed)
 │
-└── Task_3_Upcoming_Task/                      # Milestone 3 (In Progress / Next Deliverable)
+└── Task_3_Database_Auto_Ingestion_Upsert/     # Milestone 3: Database Auto-Ingestion & Upsert
+    ├── main.py                                # CLI with init, ingest, verify, report commands
+    ├── config.py                              # Centralized configuration & file paths
+    ├── requirements.txt                       # Task 3 dependencies (SQLAlchemy, Pandas, etc.)
+    ├── README.md                              # Deep-dive technical documentation
+    ├── database/
+    │   └── database.db                        # SQLite relational database storage
+    ├── data/
+    │   ├── students.csv                       # Initial dataset (105 records)
+    │   ├── students_updated.csv               # Updated dataset (105 records)
+    │   └── rejected_records.csv               # Quarantined rows with explicit failure reasons
+    ├── logs/
+    │   └── ingestion.log                      # Rotating execution trace
+    ├── src/
+    │   ├── db_connection.py                   # SQLAlchemy engine & transaction manager
+    │   ├── schema.py                          # Student ORM model & table provisioning
+    │   ├── validation.py                      # Multi-rule data validator & quarantine engine
+    │   ├── upsert.py                          # Batched atomic INSERT OR UPDATE engine
+    │   ├── ingestion.py                       # Pipeline orchestrator
+    │   ├── verification.py                    # Database integrity auditor & inspector
+    │   └── reporting.py                       # Execution summary report generator
+    └── tests/                                 # Pytest test suite (17 tests passed)
 ```
+
+---
+
+## 🧪 Comprehensive Automated Test Suites (48 Tests Passed)
+
+Both tasks have completely isolated test environments using temporary SQLite databases (`tmp_path`) and synthetic fixtures:
+
+| Module | Test File | Test Focus | Passed |
+| :--- | :--- | :--- | :---: |
+| **Task 2** | `tests/test_loader.py` | Ingestion, encodings & empty file checks | 4 |
+| **Task 2** | `tests/test_currency.py` | Multi-currency regex stripping & negative parsing | 14 |
+| **Task 2** | `tests/test_dates.py` | ISO standardization & day-first disambiguation | 2 |
+| **Task 2** | `tests/test_cleaning.py` | Imputation strategies & deduplication | 2 |
+| **Task 2** | `tests/test_schema.py` | Snake_casing & dtype casting | 2 |
+| **Task 2** | `tests/test_validation.py` | Range checks & quarantine segregation | 1 |
+| **Task 2** | `tests/test_edge_cases.py` | Empty DataFrames & boundary values | 5 |
+| **Task 2** | `tests/test_pipeline.py` | End-to-end ETL integration | 1 |
+| **Task 3** | `tests/test_database.py` | Schema creation, unique constraints & PRAGMA audits | 4 |
+| **Task 3** | `tests/test_validation.py` | Email regex, marks ranges, intra-batch duplicates | 7 |
+| **Task 3** | `tests/test_upsert.py` | Inserts, updates, unchanged rows & transaction rollbacks | 6 |
+| **Total** | | **Complete Production Test Coverage** | **48 / 48** |
 
 ---
 
@@ -180,4 +204,4 @@ Datheon_Python_for_Data_Engineering_-_Automation_Internship/
 - **GitHub**: [@deevakarkumar](https://github.com/deevakarkumar)  
 - **Email**: `deevakarkumarthakur@gmail.com`  
 - **Internship Track**: Python for Data Engineering & Automation  
-- **Organization**: Datheon
+- **Host Organization**: Datheon

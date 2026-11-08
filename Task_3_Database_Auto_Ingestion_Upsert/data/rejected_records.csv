@@ -1,0 +1,6 @@
+student_id,student_name,email,course,marks,enrollment_date,last_updated,rejection_reason
+STU991,Test Student NegativeMarks,test.negative@university.edu,Data Science,-15.5,2024-05-02,2024-05-02 11:00:00,"Marks -15.5 out of allowed range [0.0, 100.0]"
+STU992,,missing.name@university.edu,Artificial Intelligence,85.0,2024-05-02,2024-05-02 11:00:00,Missing mandatory field 'student_name'
+STU993,Test Student BadEmail,invalid-email-address-no-at-domain,Cybersecurity,78.0,2024-05-02,2024-05-02 11:00:00,Invalid email syntax: 'invalid-email-address-no-at-domain'
+STU994,Test Student OverMarks,over.marks@university.edu,Cloud Computing,145.0,2024-05-02,2024-05-02 11:00:00,"Marks 145.0 out of allowed range [0.0, 100.0]"
+STU995,Test Student BadDate,bad.date@university.edu,Software Engineering,82.0,99/99/9999,2024-05-02 11:00:00,Enrollment date '99/99/9999' does not match ISO format YYYY-MM-DD
