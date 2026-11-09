@@ -189,33 +189,40 @@ The database table `students` is defined in [`src/schema.py`](src/schema.py):
 
 ## 10. How to Run the Project (CLI Examples)
 
-The engine provides an intuitive Command-Line Interface (`main.py`):
+The engine provides both an **interactive Streamlit Web Dashboard (`app.py`)** and an automated **Command-Line Interface (`main.py`)**:
 
-### 1. Initialize the Relational Database
+### 1. Launch Interactive Streamlit Web UI (Recommended for Evaluators)
+Launch the visual web dashboard to explore the SQLite database, run one-click upserts, inspect quarantined violations, and run live SQL queries:
+```powershell
+streamlit run app.py
+```
+*Accessible in your browser at `http://localhost:8501`.*
+
+### 2. Initialize the Relational Database via CLI
 Creates `database/database.db` and provisions table schemas:
 ```powershell
 python main.py init
 ```
 
-### 2. Ingest Initial Dataset (Fresh Inserts)
+### 3. Ingest Initial Dataset (Fresh Inserts)
 Ingests 105 clean student records:
 ```powershell
 python main.py ingest --file data/students.csv
 ```
 
-### 3. Ingest Updated Dataset (Demonstrating Upsert & Quarantine)
+### 4. Ingest Updated Dataset (Demonstrating Upsert & Quarantine)
 Executes batched upsert across modified, new, unchanged, and invalid records:
 ```powershell
 python main.py ingest --file data/students_updated.csv --batch-size 50
 ```
 
-### 4. Verify Database Integrity
+### 5. Verify Database Integrity
 Executes primary key collision checks and SQLite PRAGMA audits:
 ```powershell
 python main.py verify
 ```
 
-### 5. Inspect Database Records & Status
+### 6. Inspect Database Records & Status
 Displays current database table metrics and prints sample rows:
 ```powershell
 python main.py report --limit 10

@@ -100,23 +100,27 @@ flowchart TD
 ![Task 3 Ingestion Report](screenshots/task3_ingestion_report.png)
 
 ```powershell
-# 1. Initialize Relational Database Schema
+# 1. Launch Task 3 Interactive Web Dashboard (Recommended for Evaluators)
 cd Task_3_Database_Auto_Ingestion_Upsert
+streamlit run app.py
+
+# 2. Or Run via CLI:
+# Initialize Relational Database Schema
 python main.py init
 
-# 2. Ingest Initial Dataset (105 Fresh Inserts)
+# Ingest Initial Dataset (105 Fresh Inserts)
 python main.py ingest --file data/students.csv
 
-# 3. Ingest Updated Dataset (Demonstrating Upsert & Quarantine)
+# Ingest Updated Dataset (Demonstrating Upsert & Quarantine)
 python main.py ingest --file data/students_updated.csv --batch-size 50
 
-# 4. Verify Database Integrity & Constraints
+# Verify Database Integrity & Constraints
 python main.py verify
 
-# 5. Inspect Stored Database Records
+# Inspect Stored Database Records
 python main.py report --limit 10
 
-# 6. Run Task 3 Automated Tests (17 Passed)
+# Run Task 3 Automated Tests (17 Passed)
 pytest -v
 ```
 
