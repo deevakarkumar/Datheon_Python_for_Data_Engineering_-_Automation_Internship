@@ -90,10 +90,13 @@ flowchart TD
 ```
 
 ### 🌟 Key Highlights
+- **Interactive Streamlit Web Dashboard**: Live browser UI (`streamlit run app.py` on port 8502) with live SQLite table explorer, one-click upsert trigger, and interactive SQL console.
 - **Intelligent Field-Level Diffing**: Detects new vs. modified vs. unchanged records. Unchanged records trigger zero redundant writes.
 - **Strict Data Quality Gate**: Validates email regex, enforces marks within $[0.0, 100.0]$, checks ISO date formatting, and quarantines intra-batch duplicate keys.
 - **Transactional Atomicity**: Built on SQLAlchemy 2.0 session contexts (`with get_session()`), ensuring automatic rollback on failure and 100% database consistency.
 - **Self-Healing Verification**: Built-in verification module executing SQLite `PRAGMA integrity_check` and confirming 0 duplicate primary keys or emails.
+
+![Task 3 Interactive Web UI](screenshots/task3_dashboard_preview.png)
 
 ### 📊 Dynamic Execution Report
 

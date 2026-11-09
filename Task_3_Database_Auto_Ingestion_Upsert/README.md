@@ -196,7 +196,9 @@ Launch the visual web dashboard to explore the SQLite database, run one-click up
 ```powershell
 streamlit run app.py
 ```
-*Accessible in your browser at `http://localhost:8501`.*
+*Accessible in your browser at `http://localhost:8502`.*
+
+![Task 3 Interactive Web UI](../screenshots/task3_dashboard_preview.png)
 
 ### 2. Initialize the Relational Database via CLI
 Creates `database/database.db` and provisions table schemas:
